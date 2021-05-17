@@ -5,7 +5,7 @@ from result import *
 def MainWindow():
     root = Tk()       
     root.title("Most Advanced Calculator")      
-    root.geometry('500x200')
+    root.geometry('300x150')
 
     # Top Text
     top_text = Label (root, text = 'Enter your height in: cm.')
