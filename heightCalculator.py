@@ -1,6 +1,6 @@
-
-from tkinter import * 
-from mathcalc import *  
+# Libs
+from tkinter import *
+from result import *
 
 def MainWindow():
     root = Tk()       
@@ -16,9 +16,12 @@ def MainWindow():
     input_box.pack()
 
     # Button
-    calculate_button = Button(root, text = 'Calculate', bd = '3', padx = '10', pady = '10', command = root.destroy)
+    calculate_button = Button(root, text = 'Calculate', bd = '3', padx = '10', pady = '10', command = Result)
     calculate_button.pack(side = 'bottom', padx = '20', pady = '20')   
     
+
     root.mainloop()
 
 MainWindow()
+
+
