@@ -1,7 +1,7 @@
-# Libs
-from tkinter import *
-from result import *
-from mathstuff import *
+from tkinter import * # Tk
+from result import * # result.py
+from mathstuff import * # mathstuff.py
+
 
 def MainWindow():
     root = Tk()       

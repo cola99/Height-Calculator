@@ -1,5 +1,6 @@
 from tkinter import *
 
+
 def Result():
  
     # Sub Window
