@@ -8,25 +8,25 @@ root.resizable(False, False)
  
 def returnEntry():
     result = myEntry.get()
-    resultLabel.config(text=result)
-    myEntry.delete()
+    resultLabel.config(text=result + "cm")
  
 # Label
 topLabl = Label(root,text="Enter Your Height: ")
-topLabl.grid(column=0, row=0, padx=15, pady=30)
+topLabl.grid(column=0, row=0, padx=20, pady=30)
 
 # Entry
 myEntry = Entry(root, width=20)
 myEntry.bind("<Return>",returnEntry)
-myEntry.grid(column=1, row=0, padx=15, pady=30)
+myEntry.grid(column=1, row=0, padx=20, pady=30)
  
 # Button
 enterEntry = Button(root, text= "Calculate", command=returnEntry)
-enterEntry.grid(column=2, row=0, padx=15, pady=30)
+enterEntry.grid(column=2, row=0, padx=20, pady=30)
  
 # Emplty Label
-resultLabel = Label(root, text = "<result>")
-resultLabel.grid(column=1, row=1)
- 
+resultLabel = Label(root, text = "")
+resultLabel.config(font=("Courier", 20))
+resultLabel.grid()
+
 
 root.mainloop()
