@@ -2,7 +2,7 @@ from tkinter import *
 
 def Result():
  
-     # Sub Window
+    # Sub Window
     sub = Toplevel()
     sub.title("Result")
     sub_text = Label(sub, text = 'Your Height is: ' )
