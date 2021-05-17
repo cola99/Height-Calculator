@@ -8,7 +8,7 @@ root.resizable(False, False)
  
 def returnEntry():
     result = myEntry.get()
-    resultLabel.config(text=result + "cm")
+    resultLabel.config(text="Your Height is roughly: " + result + "cm")
  
 # Label
 topLabl = Label(root,text="Enter Your Height: ")
@@ -25,7 +25,6 @@ enterEntry.grid(column=2, row=0, padx=20, pady=30)
  
 # Emplty Label
 resultLabel = Label(root, text = "")
-resultLabel.config(font=("Courier", 20))
 resultLabel.grid()
 
 
