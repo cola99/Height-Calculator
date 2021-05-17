@@ -1,7 +1,6 @@
 from tkinter import *
 
 
-
 def MathStuff():
 
     # Input 
