@@ -1,27 +1,28 @@
 from tkinter import * # Tk
-from result import * # result.py
-from mathstuff import * # mathstuff.py
 
 
-def MainWindow():
-    root = Tk()       
-    root.title("Most Advanced Calculator")      
-    root.geometry('300x150')
+root = Tk()       
+root.title("Most Advanced Calculator")      
+root.geometry('550x100')
+root.resizable(False, False)
 
-    # Top Text
-    top_text = Label (root, text = 'Enter your height in: cm.')
-    top_text.pack(side = 'top', padx = '10', pady = '10')
+# Global Vars
+var1 = StringVar("")
 
-    # Insane Math/Calculation
-    MathStuff()
+# Labels
+label_1 = Label(root, text="Enter your height:")
+label_1.grid(column=0, row=0, padx = 15, pady = 30)
 
-    # Button
-    calculate_button = Button(root, text = 'Calculate', bd = '3', padx = '10', pady = '10', command = Result)
-    calculate_button.pack(side = 'bottom', padx = '20', pady = '20')   
-    
+# Entrys
+entry_1 = Entry(root, width=50, textvariable=var1)
+entry_1.grid(column=1, row=0, padx = 15, pady = 5)
+  
+# Buttons
+button1 = Button(root, text="Calculate")
+button1.grid(column=2, row=0, padx = 15, pady = 5)
 
-    root.mainloop()
+root.mainloop()
 
-MainWindow()
+
 
 
