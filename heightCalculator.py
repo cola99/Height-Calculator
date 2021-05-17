@@ -1,24 +1,30 @@
-from tkinter import * # Tk
-
-root = Tk()       
-root.title("Most Advanced Calculator")      
-root.geometry('550x100')
-root.resizable(False, False)
-
-# Labels
-label_1 = Label(root, text="Enter your height:")
-label_1.grid(column=0, row=0, padx=15, pady=30)
-
-# Entrys
-entry_1 = Entry(root, width=50)
-entry_1.grid(column=1, row=0, padx=15, pady=5)
-  
-# Buttons
-button1 = Button(root, text="Calculate")
-button1.grid(column=2, row=0, padx=15, pady=5)
-
+# Display Entry in a Label
+ 
+from tkinter import * 
+ 
+root = Tk()
+ 
+def returnEntry(arg=None):
+    """Gets the result from Entry and return it to the Label"""
+ 
+    result = myEntry.get()
+    resultLabel.config(text=result)
+    myEntry.delete(0,END)
+ 
+# Create the Entry widget
+myEntry = Entry(root, width=20)
+myEntry.bind("<Return>",returnEntry)
+myEntry.grid(column=0, row=0, padx=15, pady=30)
+ 
+# Create the Enter button
+enterEntry = Button(root, text= "Calculate", command=returnEntry)
+enterEntry.grid(column=2, row=0, padx=15, pady=30)
+ 
+# Create and emplty Label to put the result in
+resultLabel = Label(root, text = "")
+resultLabel.grid(column=3, row=0, padx=15, pady=30)
+ 
+ 
+root.geometry("550x100")
+ 
 root.mainloop()
-
-
-
-
